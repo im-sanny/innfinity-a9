@@ -70,5 +70,95 @@
         ],
         "image": "rustic_countryside_retreat.jpg",
         "view_property_button": "Book Now"
+    },
+    {
+        "id": 5,
+        "estate_title": "Seaside Bungalow",
+        "segment_name": "Hospitality",
+        "description": "Relax and unwind in our charming seaside bungalow, just steps away from the shore.",
+        "price": "$400 per night",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "Coastal Retreat, California",
+        "facilities": [
+            "Oceanfront Patio",
+            "Beach Access",
+            "Outdoor Shower",
+            "Sunset Views"
+        ],
+        "image": "seaside_bungalow.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 6,
+        "estate_title": "Mountain Chalet Getaway",
+        "segment_name": "Hospitality",
+        "description": "Escape to the mountains and enjoy the cozy comforts of our chalet, surrounded by stunning alpine scenery.",
+        "price": "$350 per night",
+        "status": "rent",
+        "area": "1800 sq ft",
+        "location": "Mountain Village, Switzerland",
+        "facilities": [
+            "Ski-In/Ski-Out Access",
+            "Fireplace",
+            "Sauna",
+            "Mountain Views"
+        ],
+        "image": "mountain_chalet_getaway.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 7,
+        "estate_title": "City Center Loft",
+        "segment_name": "Hospitality",
+        "description": "Live in style in our chic city center loft, with trendy cafes and boutiques right at your doorstep.",
+        "price": "$180 per night",
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "City Center, Paris",
+        "facilities": [
+            "Modern Design",
+            "City Views",
+            "Walkable Location",
+            "Hip Neighborhood"
+        ],
+        "image": "city_center_loft.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 8,
+        "estate_title": "Historic Bed and Breakfast",
+        "segment_name": "Hospitality",
+        "description": "Step back in time and experience old-world charm at our historic bed and breakfast, nestled in a quaint village.",
+        "price": "$150 per night",
+        "status": "rent",
+        "area": "2500 sq ft",
+        "location": "Historic Village, England",
+        "facilities": [
+            "Antique Furnishings",
+            "Homemade Breakfast",
+            "Garden Courtyard",
+            "Cozy Fireplace"
+        ],
+        "image": "historic_bed_and_breakfast.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 9,
+        "estate_title": "Safari Lodge Experience",
+        "segment_name": "Hospitality",
+        "description": "Embark on an unforgettable adventure at our safari lodge, surrounded by the wonders of the African wilderness.",
+        "price": "$600 per night",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "Savannah Plains, Kenya",
+        "facilities": [
+            "Game Drives",
+            "Luxury Tents",
+            "Bush Dinners",
+            "Wildlife Viewing"
+        ],
+        "image": "safari_lodge_experience.jpg",
+        "view_property_button": "Book Now"
     }
 ]
