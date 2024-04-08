@@ -38,25 +38,24 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Photo URL</span>
                 </label>
                 <input
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
+                  type=""
+                  name="photoURL"
+                  placeholder="Photo URL"
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Confirm Password</span>
+                  <span className="label-text"> Password</span>
                 </label>
                 <input
                   type="password"
-                  name="confirmPassword"
-                  placeholder="Confirm your password"
-                  className="input input-bordered"
+                  name="password"
+                  placeholder="Enter your password"                  className="input input-bordered"
                   required
                 />
               </div>
