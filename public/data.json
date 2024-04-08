@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxury Beach Resort",
+        "segment_name": "Hospitality",
+        "description": "Experience ultimate luxury at our beachfront resort, complete with stunning ocean views and world-class amenities.",
+        "price": "$500 per night",
+        "status": "rent",
+        "area": "10,000 sq ft",
+        "location": "Tropical Island Paradise",
+        "facilities": [
+            "Private Beach Access",
+            "Infinity Pool",
+            "Spa",
+            "Gourmet Dining"
+        ],
+        "image": "luxury_beach_resort.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Mountain Retreat",
+        "segment_name": "Hospitality",
+        "description": "Escape to the tranquility of the mountains in our cozy retreat, surrounded by breathtaking natural beauty.",
+        "price": "$300 per night",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "Alpine Wilderness, Colorado",
+        "facilities": [
+            "Fireplace",
+            "Hiking Trails",
+            "Hot Tub",
+            "Scenic Views"
+        ],
+        "image": "cozy_mountain_retreat.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 3,
+        "estate_title": "Urban Boutique Hotel",
+        "segment_name": "Hospitality",
+        "description": "Immerse yourself in the vibrant culture of the city at our stylish boutique hotel, located in the heart of downtown.",
+        "price": "$200 per night",
+        "status": "rent",
+        "area": "5000 sq ft",
+        "location": "Downtown District, New York",
+        "facilities": [
+            "Rooftop Bar",
+            "Fitness Center",
+            "Concierge Service",
+            "Modern Design"
+        ],
+        "image": "urban_boutique_hotel.jpg",
+        "view_property_button": "Book Now"
+    },
+    {
+        "id": 4,
+        "estate_title": "Rustic Countryside Retreat",
+        "segment_name": "Hospitality",
+        "description": "Discover rustic charm and serenity in our countryside retreat, surrounded by lush greenery and peaceful surroundings.",
+        "price": "$250 per night",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "Rural Countryside, France",
+        "facilities": [
+            "Farm-to-Table Dining",
+            "Outdoor Activities",
+            "Cozy Cabins",
+            "Nature Walks"
+        ],
+        "image": "rustic_countryside_retreat.jpg",
+        "view_property_button": "Book Now"
+    }
+]
