@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Card,
   CardHeader,
@@ -6,6 +7,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
   const {
@@ -60,13 +62,15 @@ const ServiceCard = ({ service }) => {
           >
             {view_property_button}
           </Button>
-          <Button
-            ripple={false}
-            fullWidth={""}
-            className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn mt-2"
-          >
-            View details
-          </Button>
+          <Link to={`/cardDetails/${id}`}>
+            <Button
+              ripple={false}
+              fullWidth={""}
+              className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn mt-2"
+            >
+              View Details
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>
