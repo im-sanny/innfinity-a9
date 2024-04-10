@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import ExploreProperties from "../ServiceCard/ExploreProperties";
 
 const Home = () => {
     const services = useLoaderData();
@@ -125,6 +126,10 @@ const Home = () => {
         {
             services.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
         }
+      </div>
+      {/* more properties */}
+      <div className="">
+        <ExploreProperties></ExploreProperties>
       </div>
     </>
   );

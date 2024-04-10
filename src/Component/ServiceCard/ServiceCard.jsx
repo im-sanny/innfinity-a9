@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { MdAreaChart, MdOutlinePageview } from "react-icons/md";
+import { AiFillDollarCircle } from "react-icons/ai";
 import {
   Card,
   CardHeader,
@@ -34,8 +36,8 @@ const ServiceCard = ({ service }) => {
           />
         </CardHeader>
         <div className="card-actions justify mt-2">
-          <div className="badge badge-outline">{status}</div>
-          <div className="badge badge-outline">{area}</div>
+          <div className="badge badge-outline"><AiFillDollarCircle className="flex justify-center items-center"></AiFillDollarCircle>{status}</div>
+          <div className="badge badge-outline"><MdAreaChart ></MdAreaChart>{area}</div>
         </div>
         <CardBody>
           <div className="mb-2 flex items-center justify-between">
@@ -55,19 +57,12 @@ const ServiceCard = ({ service }) => {
           </Typography>
         </CardBody>
         <CardFooter className="pt-0 flex justify-around ">
-          <Button
-            ripple={false}
-            fullWidth={""}
-            className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn mt-2"
-          >
-            {view_property_button}
-          </Button>
           <Link to={`/cardDetails/${id}`}>
             <Button
               ripple={false}
-              fullWidth={""}
-              className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn mt-2"
-            >
+              fullWidth={true}
+              className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn w-full mt-2"
+            > <MdOutlinePageview size={20} className="flex justify-center items-center"></MdOutlinePageview>
               View Details
             </Button>
           </Link>
