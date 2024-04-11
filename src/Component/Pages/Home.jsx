@@ -128,7 +128,9 @@ const Home = () => {
         }
       </div>
       {/* more properties */}
-      <div className="">
+      <div className="text-center">
+        <h2 className="text-5xl font-normal">Discover more services we provide</h2>
+        <p></p>
         <ExploreProperties></ExploreProperties>
       </div>
     </>
