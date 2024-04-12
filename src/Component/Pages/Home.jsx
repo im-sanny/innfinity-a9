@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import ExploreProperties from "../ServiceCard/ExploreProperties";
+import ChoseSection from "../ServiceCard/ChoseSection";
 
 const Home = () => {
     const services = useLoaderData();
@@ -132,6 +133,9 @@ const Home = () => {
         <h2 className="text-5xl font-normal mb-5">Discover more services we provide</h2>
         <p></p>
         <ExploreProperties></ExploreProperties>
+      </div>
+      <div className="my-10">
+        <ChoseSection></ChoseSection>
       </div>
     </>
   );

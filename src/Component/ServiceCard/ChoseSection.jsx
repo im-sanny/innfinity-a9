@@ -1,11 +1,9 @@
-import React from 'react';
+
 
 const ChoseSection = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    
+  );
 };
 
 export default ChoseSection;
