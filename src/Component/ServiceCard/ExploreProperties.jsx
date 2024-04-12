@@ -1,48 +1,40 @@
+import { FaArrowRightLong } from "react-icons/fa6";
 const ExploreProperties = () => {
   return (
     <div>
-      <div className="carousel carousel-center max-w-6xl p-4 space-x-4 bg-neutral rounded-box">
-        <div className="carousel-item">
+      <div className="carousel carousel-center max-w-6xl p-4 mx-5 space-x-4 bg-neutral rounded-box">
+        <div className="carousel-item w-[280px] ">
           <img
-            src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+            src="https://i.ibb.co/72Qx2YK/pexels-alexander-dummer-134469.jpg"
+            className="rounded-box object-cover"
+          />
+        </div>
+        <div className="carousel-item w-[280px]">
+          <img
+            src="https://i.ibb.co/3SscBBV/pexels-medhat-ayad-447592.jpg"
             className="rounded-box"
           />
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item w-[280px]">
           <img
-            src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
-            className="rounded-box"
+            src="https://i.ibb.co/MRj89rx/pexels-medhat-ayad-439227.jpg"
+            className="rounded-box object-cover"
           />
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item w-[280px]">
           <img
-            src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
-            className="rounded-box"
+            src="https://i.ibb.co/GCn8TZ8/pexels-fauxels-3184357.jpg"
+            className="rounded-box object-cover"
           />
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item w-[280px]">
           <img
-            src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
-            className="rounded-box"
+            src="https://i.ibb.co/0nfHCjm/pexels-robin-1020370.jpg"
+            className="rounded-box object-cover"
           />
         </div>
-        <div className="carousel-item">
-          <img
-            src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
-            className="rounded-box"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
-            className="rounded-box"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
-            className="rounded-box"
-          />
+        <div>
+          <h2>Press {FaArrowRightLong} to swipe</h2>
         </div>
       </div>
     </div>

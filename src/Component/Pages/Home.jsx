@@ -129,7 +129,7 @@ const Home = () => {
       </div>
       {/* more properties */}
       <div className="text-center">
-        <h2 className="text-5xl font-normal">Discover more services we provide</h2>
+        <h2 className="text-5xl font-normal mb-5">Discover more services we provide</h2>
         <p></p>
         <ExploreProperties></ExploreProperties>
       </div>
