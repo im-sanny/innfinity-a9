@@ -1,7 +1,7 @@
 const Register = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-300 rounded-lg">
+      <div className="hero min-h-screen bg-base-300 rounded-lg my-5">
         <div className="hero-content">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Now!</h1>

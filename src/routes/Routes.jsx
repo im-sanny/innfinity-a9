@@ -6,6 +6,7 @@ import Login from "../Component/Pages/Login";
 import ErrorPage from "../Component/Pages/ErrorPage";
 import CardDetails from "../Component/Pages/CardDetails";
 import UpDateProfile from "../Component/Pages/UpDateProfile";
+import UserProfile from "../Component/Pages/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path:'/upDateProfile',
         element:<UpDateProfile></UpDateProfile>
       },
+      {
+        path:'/userProfile',
+        element:<UserProfile></UserProfile>,
+      }
 
     ],
   },

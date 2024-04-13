@@ -1,4 +1,4 @@
-const UpDateProfile = () => {
+const UserProfile = () => {
   return (
     <div className="flex justify-center max-w-6xl">
       <div className="flex flex-col justify-center w-full max-w-xl p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
@@ -78,4 +78,4 @@ const UpDateProfile = () => {
   );
 };
 
-export default UpDateProfile;
+export default UserProfile;
