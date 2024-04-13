@@ -1,8 +1,8 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 const ExploreProperties = () => {
   return (
-    <div>
-      <div className="carousel carousel-center max-w-6xl p-4 mx-auto space-x-4 bg-neutral rounded-box">
+    <>
+      <div className="carousel carousel-center w-full lg:w-6xl p-4 lg:mx-auto space-x-4 bg-neutral rounded-box">
         <div className="carousel-item w-[280px] ">
           <img
             src="https://i.ibb.co/72Qx2YK/pexels-alexander-dummer-134469.jpg"
@@ -39,7 +39,7 @@ const ExploreProperties = () => {
           Press <FaArrowRightLong className="mx-2"></FaArrowRightLong> to swipe
         </h2>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -4,9 +4,9 @@ import ExploreProperties from "../ServiceCard/ExploreProperties";
 import ChoseSection from "../ServiceCard/ChoseSection";
 
 const Home = () => {
-    const services = useLoaderData();
-    console.log(services);
-    
+  const services = useLoaderData();
+  console.log(services);
+
   return (
     <>
       {/* banner section */}
@@ -124,14 +124,23 @@ const Home = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-5 lg:my-10">
-        {
-            services.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
-        }
+        {services.map((service) => (
+          <ServiceCard key={service.id} service={service}></ServiceCard>
+        ))}
       </div>
       {/* more properties */}
-      <div className="text-center">
-        <h2 className="text-5xl font-normal mb-5">Discover more services we provide</h2>
-        <p></p>
+      <div className="text-center max-w-6xl mx-5">
+        <h2 className="text-5xl font-normal mb-5">
+          Discover more services we provide
+        </h2>
+        <div className="flex justify-center">
+
+        <p className="max-w-3xl flex justify-center mb-5">
+          Innfinity offers unmatched luxury. Impeccable service, elegant
+          accommodations, and breathtaking ambiance. A haven for unforgettable
+          experiences awaits. Book now!
+        </p>
+        </div>
         <ExploreProperties></ExploreProperties>
       </div>
       <div className="my-10">

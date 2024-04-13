@@ -36,8 +36,14 @@ const ServiceCard = ({ service }) => {
           />
         </CardHeader>
         <div className="card-actions justify mt-2">
-          <div className="badge badge-outline"><AiFillDollarCircle className="flex justify-center items-center"></AiFillDollarCircle>{status}</div>
-          <div className="badge badge-outline"><MdAreaChart ></MdAreaChart>{area}</div>
+          <div className="badge badge-outline">
+            <AiFillDollarCircle className="flex justify-center items-center"></AiFillDollarCircle>
+            {status}
+          </div>
+          <div className="badge badge-outline">
+            <MdAreaChart></MdAreaChart>
+            {area}
+          </div>
         </div>
         <CardBody>
           <div className="mb-2 flex items-center justify-between">
@@ -62,7 +68,12 @@ const ServiceCard = ({ service }) => {
               ripple={false}
               fullWidth={true}
               className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 btn w-full mt-2"
-            > <MdOutlinePageview size={20} className="flex justify-center items-center"></MdOutlinePageview>
+            >
+              {" "}
+              <MdOutlinePageview
+                size={20}
+                className="flex justify-center items-center"
+              ></MdOutlinePageview>
               View Details
             </Button>
           </Link>

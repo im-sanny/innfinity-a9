@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
 
 const CardDetails = () => {
   const details = useLoaderData();
@@ -28,9 +29,9 @@ const CardDetails = () => {
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  className="text-xs hover:underline"
+                  className="text-xs hover:underline flex items-center gap-1"
                 >
-                  {service.location}
+                  <FaLocationDot></FaLocationDot> {service.location}
                 </a>
               </p>
             </div>
@@ -41,7 +42,9 @@ const CardDetails = () => {
                 <p>{service.facilities[1]}</p>
                 <p>{service.facilities[2]}</p>
               </div>
-              <p>Segment: {service.segment_name}</p>
+              <p className="flex items-center gap-1">
+                Segment: {service.segment_name}
+              </p>
             </div>
           </div>
         </div>
