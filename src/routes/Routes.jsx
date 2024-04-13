@@ -5,6 +5,7 @@ import Register from "../Component/Pages/Register";
 import Login from "../Component/Pages/Login";
 import ErrorPage from "../Component/Pages/ErrorPage";
 import CardDetails from "../Component/Pages/CardDetails";
+import UpDateProfile from "../Component/Pages/UpDateProfile";
 
 const router = createBrowserRouter([
   {
@@ -27,9 +28,13 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path:'login',
+        path:'/login',
         element:<Login></Login>
-      }
+      },
+      {
+        path:'/upDateProfile',
+        element:<UpDateProfile></UpDateProfile>
+      },
 
     ],
   },
