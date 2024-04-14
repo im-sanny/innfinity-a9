@@ -1,4 +1,20 @@
+import { useContext } from "react";
+import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
+import { useForm } from "react-hook-form";
+
 const Register = () => {
+  const {createUser} = useContext(AuthContext)
+  console.log(createUser);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-300 rounded-lg my-5">
@@ -11,6 +27,7 @@ const Register = () => {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
