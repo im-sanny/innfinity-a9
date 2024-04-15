@@ -1,32 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin";
 
-
 const Login = () => {
-  const { signInUser } = useContext(AuthContext)
+  const { signInUser } = useContext(AuthContext);
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => {
-      const {email, password} = data;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-      signInUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
-  
+  //navigation system
+  const navigate = useNavigate();
+  const location = useLocation();
+  const form = location?.state || "/";
+
+  //handle register
+  const onSubmit = (data) => {
+    const { email, password } = data;
+
+    signInUser(email, password).then((result) => {
+      if (result.user) {
+        navigate(form);
+      }
+    });
+  };
+
   return (
     <>
       <div className="hero min-h-screen bg-base-200 rounded-lg my-5 py-5">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handleSubmit(onSubmit)}  className="card-body">
+          <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-center text-2xl font-bold">Please Login</h2>
             <div className="form-control">
               <label className="label">
@@ -38,8 +46,8 @@ const Login = () => {
                 placeholder="email"
                 className="input input-bordered"
                 {...register("email", { required: true })}
-                />
-                {errors.email && <span>This field is required</span>}
+              />
+              {errors.email && <span>This field is required</span>}
             </div>
             <div className="form-control">
               <label className="label">
@@ -51,8 +59,8 @@ const Login = () => {
                 placeholder="password"
                 className="input input-bordered"
                 {...register("password", { required: true })}
-                />
-                {errors.password && <span>This field is required</span>}
+              />
+              {errors.password && <span>This field is required</span>}
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
@@ -71,9 +79,9 @@ const Login = () => {
               </Link>
             </p>
           </form>
-            <div className="">
-              <SocialLogin></SocialLogin>
-            </div>
+          <div className="">
+            <SocialLogin></SocialLogin>
+          </div>
         </div>
       </div>
     </>

@@ -6,7 +6,7 @@ const CardDetails = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
   const service = details.find((detail) => detail.id == idInt);
-  console.log(service);
+  // console.log(service);
   return (
     <>
       <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800 rounded-lg my-5">

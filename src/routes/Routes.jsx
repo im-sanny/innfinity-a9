@@ -7,40 +7,44 @@ import ErrorPage from "../Component/Pages/ErrorPage";
 import CardDetails from "../Component/Pages/CardDetails";
 import UpDateProfile from "../Component/Pages/UpDateProfile";
 import UserProfile from "../Component/Pages/UserProfile";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch ('/data.json')
+        loader: () => fetch("/data.json"),
       },
       {
-        path: '/cardDetails/:id',
-        element:<CardDetails></CardDetails>,
-        loader: () => fetch ('/data.json')
+        path: "/cardDetails/:id",
+        element: (
+          <PrivateRoute>
+            <CardDetails></CardDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/data.json"),
       },
       {
-        path:'/register',
+        path: "/register",
         element: <Register></Register>,
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:'/upDateProfile',
-        element:<UpDateProfile></UpDateProfile>
+        path: "/upDateProfile",
+        element: <UpDateProfile></UpDateProfile>,
       },
       {
-        path:'/userProfile',
-        element:<UserProfile></UserProfile>,
-      }
-
+        path: "/userProfile",
+        element: <UserProfile></UserProfile>,
+      },
     ],
   },
 ]);

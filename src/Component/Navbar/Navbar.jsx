@@ -55,7 +55,7 @@ const Navbar = () => {
                 </div>
               </label>
               <button onClick={logOut} className="btn btn-ghost">
-                Sign Out
+                Logout
               </button>
             </div>
           ) : (
