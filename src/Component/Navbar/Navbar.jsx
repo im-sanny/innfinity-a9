@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import UseAuth from "../../hooks/UseAuth";
 
 const Navbar = () => {
+  const { logOut, user } = UseAuth();
   const navLinks = (
     <>
       <li><NavLink to="/">Home</NavLink></li>
@@ -41,24 +43,26 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">Innfinity</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {navLinks}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-8 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+          {
+          user ? (
+            <div className="flex items-center">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} />
+                </div>
+              </label>
+              <button onClick={logOut} className="btn btn-ghost">
+                Sign Out
+              </button>
             </div>
-          </div>
-          <NavLink to={'/login'}><p className="btn btn-ghost">Login</p></NavLink>
+          ) : (
+            <NavLink to={"/login"}>
+              <button className="btn btn-ghost">Login</button>
+            </NavLink>
+          )}
         </div>
       </div>
     </div>
