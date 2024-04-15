@@ -1,19 +1,19 @@
-import { useContext } from "react";
-import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
+import UseAuth from "../../hooks/UseAuth";
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext)
-  console.log(createUser);
+  const { createUser } = UseAuth();
 
   const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm()
+    register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    createUser(email, password)
+    .then((result) => {
+      console.log(result);
+    });
+  };
 
   return (
     <div>
@@ -27,8 +27,7 @@ const Register = () => {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            
-            <form className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Username</span>
@@ -38,8 +37,9 @@ const Register = () => {
                   name="username"
                   placeholder="Enter your username"
                   className="input input-bordered"
-                  required
+                  {...register("username", { required: true })}
                 />
+                {errors.username && <span>This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -50,8 +50,9 @@ const Register = () => {
                   name="email"
                   placeholder="Enter your email"
                   className="input input-bordered"
-                  required
+                  {...register("email", { required: true })}
                 />
+                {errors.email && <span>This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -62,7 +63,7 @@ const Register = () => {
                   name="photoURL"
                   placeholder="Photo URL"
                   className="input input-bordered"
-                  required
+                  {...register("photoURL")}
                 />
               </div>
               <div className="form-control">
@@ -72,9 +73,11 @@ const Register = () => {
                 <input
                   type="password"
                   name="password"
-                  placeholder="Enter your password"                  className="input input-bordered"
-                  required
+                  placeholder="Enter your password"
+                  className="input input-bordered"
+                  {...register("password", { required: true })}
                 />
+                {errors.password && <span>This field is required</span>}
               </div>
               <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">
