@@ -1,19 +1,31 @@
 import { Navigate, useLocation } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
+import { DNA } from "react-loader-spinner";
 
 const PrivateRoute = ({ children }) => {
-    const {user} = UseAuth()
-    const location = useLocation()
-    console.log(location);
-    
-    if (!user) {
-        return <Navigate to='/login' state={location?.pathname || '/'}></Navigate>
-    }
+  const { user, loading } = UseAuth();
+  const location = useLocation();
+  console.log(location);
+
+  if (loading) {
     return (
-        <div>
-            { children }
-        </div>
+      <div className="flex justify-center items-center">
+        <DNA
+          visible={true}
+          height="200"
+          width=""
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        />
+      </div>
     );
+  }
+
+  if (!user) {
+    return <Navigate to="/login" state={location?.pathname || "/"}></Navigate>;
+  }
+  return <div>{children}</div>;
 };
 
 export default PrivateRoute;
