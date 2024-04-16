@@ -34,7 +34,7 @@ const FirebaseProvider = ({ children }) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
-    })
+    });
   };
 
   //sign in user
@@ -70,8 +70,8 @@ const FirebaseProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        setLoading(false);
       }
+      setLoading(false);
       return () => unsubscribe();
     });
   }, []);
@@ -85,7 +85,7 @@ const FirebaseProvider = ({ children }) => {
     logOut,
     twitterLogin,
     loading,
-    updateUserProfile
+    updateUserProfile,
   };
 
   return (

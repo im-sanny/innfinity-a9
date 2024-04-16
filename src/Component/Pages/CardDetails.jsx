@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 const CardDetails = () => {
   const details = useLoaderData();
@@ -9,12 +10,20 @@ const CardDetails = () => {
   // console.log(service);
   return (
     <>
-      <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800 rounded-lg my-5">
+      <Helmet>
+        <title>Innfinity | ShowDetails</title>
+      </Helmet>
+      <div className="navbar flex justify-center bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg">
+        <button className="flex justify-center font-bold text-xl">
+          Show Details
+        </button>
+      </div>
+      <div className="p-5 mx-auto sm:p-10 md:p-16 bg-blue-50 rounded-lg my-5">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded-lg">
           <img
             src={service.image}
             alt=""
-            className="w-full h-60 sm:h-96 dark:bg-gray-500"
+            className="w-full h-60 sm:h-96 dark:bg-gray-500 rounded-lg"
           />
           <div className="p-6 pb-6 m-4 mx-auto -mt-16 space-y-2 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
             <div className="space-y-2">

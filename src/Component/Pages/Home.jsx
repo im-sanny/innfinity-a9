@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import ExploreProperties from "../ServiceCard/ExploreProperties";
 import ChoseSection from "../ServiceCard/ChoseSection";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const services = useLoaderData();
@@ -9,6 +10,9 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Innfinity | Home</title>
+    </Helmet>
       {/* banner section */}
       <div className="mx-5 lg:max-w-6xl lg:h-full lg:mx-auto">
         <div className="carousel w-full rounded-md my-5">

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -32,6 +33,9 @@ const Login = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Innfinity | Login</title>
+    </Helmet>
       <div className="hero min-h-screen bg-base-200 rounded-lg my-5 py-5">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">

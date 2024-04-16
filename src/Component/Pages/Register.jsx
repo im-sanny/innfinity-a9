@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser, updateUserProfile } = UseAuth();
@@ -53,6 +54,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+      <title>Innfinity | Register</title>
+    </Helmet>
       <div className="hero min-h-screen bg-base-300 rounded-lg my-5">
         <div className="hero-content">
           <div className="text-center lg:text-left">
