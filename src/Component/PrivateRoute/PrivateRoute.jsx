@@ -5,7 +5,6 @@ import { DNA } from "react-loader-spinner";
 const PrivateRoute = ({ children }) => {
   const { user, loading } = UseAuth();
   const location = useLocation();
-  console.log(location);
 
   if (loading) {
     return (
@@ -20,6 +19,9 @@ const PrivateRoute = ({ children }) => {
         />
       </div>
     );
+  }
+  if (user) {
+    return children;
   }
 
   if (!user) {

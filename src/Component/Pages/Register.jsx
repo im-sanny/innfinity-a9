@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, updateUserProfile } = UseAuth();
@@ -8,23 +10,45 @@ const Register = () => {
     register,
     handleSubmit,
     formState: { errors },
+    setError,
   } = useForm();
+  const [loading, setLoading] = useState(false);
 
-  //navigation system
+  // Navigation system
   const navigate = useNavigate();
   const form = "/";
 
-  const onSubmit = (data) => {
-    const { email, password, image, fullName } = data;
+  const onSubmit = async (data) => {
+    const { email, password, photoURL, username } = data;
 
-    //create user and update profile
-    createUser(email, password)
-    .then(() => {
-      updateUserProfile(fullName, image)
-       .then(() => {
-         navigate(form);
+    // Password verification
+    if (!/(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(password)) {
+      setError("password", {
+        type: "manual",
+        message:
+          "Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long",
       });
-    });
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // Create user and update profile
+      await createUser(email, password);
+      await updateUserProfile(username, photoURL);
+
+      // Show success toast
+      toast.success("Registration successful!");
+
+      // Navigate to login page
+      navigate(form);
+    } catch (error) {
+      // Show error toast
+      toast.error("Registration failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -49,9 +73,10 @@ const Register = () => {
                   name="username"
                   placeholder="Enter your username"
                   className="input input-bordered"
+                  required
                   {...register("username", { required: true })}
                 />
-                {errors.username && <span>This field is required</span>}
+                {/* {errors.username && <span className="text-red-600">This field is required</span>} */}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -62,16 +87,17 @@ const Register = () => {
                   name="email"
                   placeholder="Enter your email"
                   className="input input-bordered"
+                  required
                   {...register("email", { required: true })}
                 />
-                {errors.email && <span>This field is required</span>}
+                {/* {errors.email && <span className="text-red-600">This field is required</span>} */}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input
-                  type="photoURL"
+                  type="text"
                   name="photoURL"
                   placeholder="Photo URL"
                   className="input input-bordered"
@@ -80,23 +106,38 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text"> Password</span>
+                  <span className="label-text">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   placeholder="Enter your password"
                   className="input input-bordered"
+                  required
                   {...register("password", { required: true })}
                 />
-                {errors.password && <span>This field is required</span>}
+                {errors.password && (
+                  <span className="text-red-600">
+                    {errors.password.message}
+                  </span>
+                )}
               </div>
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">
-                  Register
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={loading}
+                >
+                  {loading ? "Registering..." : "Register"}
                 </button>
               </div>
             </form>
+            <div className="text-center -mt-5 mb-3">
+              Already have an account?
+              <Link to="/login" className="text-blue-500 ml-2 hover:underline">
+                Login here.
+              </Link>
+            </div>
           </div>
         </div>
       </div>

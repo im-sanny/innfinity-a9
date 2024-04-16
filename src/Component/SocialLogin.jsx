@@ -3,7 +3,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 const SocialLogin = () => {
   const { googleLogin, githubLogin, twitterLogin } = UseAuth();

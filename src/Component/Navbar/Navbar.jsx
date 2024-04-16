@@ -1,15 +1,14 @@
 import { NavLink } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
+import 'animate.css';
 
 const Navbar = () => {
   const { logOut, user } = UseAuth();
   const navLinks = (
     <>
-      <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/login">Login</NavLink></li>
-      <li><NavLink to='/register'>Register</NavLink></li>
-      <li><NavLink to='/upDateProfile'>Update Profile</NavLink></li>
-      <li><NavLink to='/userProfile'>User Profile</NavLink></li>
+      <li className="font-bold"><NavLink to="/">Home</NavLink></li>
+      <li className="font-bold"><NavLink to='/upDateProfile'>Update Profile</NavLink></li>
+      <li className="font-bold"><NavLink to='/userProfile'>User Profile</NavLink></li>
     </>
   );
   return (
@@ -40,7 +39,8 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Innfinity</a>
+          
+          <div className="btn btn-ghost text-xl animate__animated animate__tada">Innfinity</div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -49,9 +49,12 @@ const Navbar = () => {
           {
           user ? (
             <div className="flex items-center">
+              <div className="">
+                <p>{user.email}</p>
+              </div>
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src={user.photoURL} />
+                  <img src={user?.photoURL || ''} />
                 </div>
               </label>
               <button onClick={logOut} className="btn btn-ghost">
