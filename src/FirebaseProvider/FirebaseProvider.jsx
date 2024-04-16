@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
@@ -21,12 +22,19 @@ const twitterProvider = new TwitterAuthProvider();
 const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(loading);
 
   //create user
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //update user profile
+  const updateUserProfile = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    })
   };
 
   //sign in user
@@ -59,12 +67,12 @@ const FirebaseProvider = ({ children }) => {
 
   //observer
   useEffect(() => {
-  const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
         setLoading(false);
       }
-      return () => unsubscribe ();
+      return () => unsubscribe();
     });
   }, []);
 
@@ -76,7 +84,8 @@ const FirebaseProvider = ({ children }) => {
     githubLogin,
     logOut,
     twitterLogin,
-    loading
+    loading,
+    updateUserProfile
   };
 
   return (

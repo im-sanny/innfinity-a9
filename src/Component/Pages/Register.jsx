@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const { createUser } = UseAuth();
+  const { createUser, updateUserProfile } = UseAuth();
   const {
     register,
     handleSubmit,
@@ -12,16 +12,18 @@ const Register = () => {
 
   //navigation system
   const navigate = useNavigate();
-  const location = useLocation();
-  const form = location?.state || "/";
+  const form = "/";
 
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { email, password, image, fullName } = data;
+
+    //create user and update profile
     createUser(email, password)
-    .then((result) => {
-      if (result.user) {
-        navigate(form);
-      }
+    .then(() => {
+      updateUserProfile(fullName, image)
+       .then(() => {
+         navigate(form);
+      });
     });
   };
 
@@ -69,7 +71,7 @@ const Register = () => {
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input
-                  type=""
+                  type="photoURL"
                   name="photoURL"
                   placeholder="Photo URL"
                   className="input input-bordered"

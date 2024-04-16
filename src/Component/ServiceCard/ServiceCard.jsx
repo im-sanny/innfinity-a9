@@ -28,7 +28,7 @@ const ServiceCard = ({ service }) => {
   return (
     <div>
       <Card className="px-4 pb-4 bg-base-300 rounded-lg h-full">
-        <CardHeader shadow={false} floated={false} className="h-96 rounded-lg">
+        <CardHeader shadow={false} floated={false} className="h-56 rounded-lg">
           <img
             src={image}
             alt="card-image"

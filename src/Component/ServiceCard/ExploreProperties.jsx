@@ -2,7 +2,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const ExploreProperties = () => {
   return (
     <>
-      <div className="carousel carousel-center w-full lg:w-6xl p-4 lg:mx-auto space-x-4 bg-neutral rounded-box">
+      <div className="carousel carousel-center w-full lg:w-6xl p-4 lg:mx-auto space-x-4  rounded-box">
         <div className="carousel-item w-[280px] ">
           <img
             src="https://i.ibb.co/72Qx2YK/pexels-alexander-dummer-134469.jpg"

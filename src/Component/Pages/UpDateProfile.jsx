@@ -1,15 +1,20 @@
+import UseAuth from "../../hooks/UseAuth";
+
 const UpDateProfile = () => {
+  const { user, updateUserProfile } = UseAuth();
+  
+
   return (
     <div className="flex justify-center max-w-6xl my-5">
       <div className="flex flex-col justify-center w-full max-w-xl p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
+          src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'}
           alt=""
           className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />
         <div className="space-y-4 text-center divide-y dark:divide-gray-300">
           <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
+            <h2 className="text-xl font-semibold sm:text-2xl">{user.displayName || 'username not found'}</h2>
             <p className="px-5 text-xs sm:text-base dark:text-gray-600">
               Full-stack developer
             </p>
