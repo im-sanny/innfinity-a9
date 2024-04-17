@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y bg-green-200">
+    <footer className="px-4 divide-y bg-blue-50">
       <div className="container px-10 flex flex-col justify-center py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
           <a
@@ -142,9 +142,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="divider divider-neutral"></div>
-      <div className="pb-5 text-sm text-center dark:text-gray-600">
-        © 1968 Company Co. All rights reserved.
+      <div className="py-2 text-sm text-center dark:text-gray-600">
+        © 1968 Innfinity Co. All rights reserved.
       </div>
     </footer>
   );
