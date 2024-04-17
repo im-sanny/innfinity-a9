@@ -14,8 +14,8 @@ This website is designed to provide users with an awesome experience by offering
 - **User Authentication**: Enjoy personalized experiences by signing up for an account and accessing exclusive features.
 - **Fast and Efficient**: Experience lightning-fast loading times and smooth performance, ensuring a hassle-free browsing experience for users.
 
-## Packages Used For Challenge Task
+## **Packages Used For Challenge Task**
 
-- [Swiper slider](https://swiperjs.com/): A powerful and customizable slider library for creating stunning slideshows.
--[React Hook form]
--[Animate.css]
+- [Swiper Slider](https://swiperjs.com/): A powerful and customizable slider library for creating stunning slideshows.
+- [React Hook Form](https://react-hook-form.com/): A library for managing form state and validation in React applications.
+- [Animate.css](https://animate.style/): A library of ready-to-use CSS animations that can be easily integrated into your projects.
