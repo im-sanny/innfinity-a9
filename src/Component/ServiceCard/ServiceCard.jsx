@@ -50,7 +50,7 @@ const ServiceCard = ({ service }) => {
             {description}
           </Typography>
         </div>
-        <div className="lg:pt-0 pt-5y flex justify-around ">
+        <div className="lg:pt-0 md:pt-0 pt-4 pt-5y flex justify-around ">
           <Link to={`/cardDetails/${id}`}>
             <a
               href="#_"

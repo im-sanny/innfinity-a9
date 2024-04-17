@@ -118,9 +118,9 @@ const Home = () => {
 
       {/* estate section */}
       <div className="text-center flex justify-center">
-        <div className=" max-w-4xl">
-          <h1 className="text-5xl"> Discover Our Best Deals</h1>
-          <p className="mt-2">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl  lg:mx-0 mx-5 mb-5"> Discover Our Best Deals</h1>
+          <p className="mt-2 lg:mx-0 mx-10 lg:mb-0 mb-5">
             Discover unbeatable deals across our array of accommodations:
             hotels, motels, resorts, vacation rentals, lodges, and guesthouses.
             Experience luxury and savings with Innfinity.
@@ -135,7 +135,7 @@ const Home = () => {
       
       {/* more properties */}
       <div className="text-center max-w-6xl mx-5">
-        <h2 className="text-5xl font-normal mb-5">
+        <h2 className="text-5xl font-normal mt-5 lg:mt-0 mb-5">
           Discover more services we provide
         </h2>
         <div className="flex justify-center">

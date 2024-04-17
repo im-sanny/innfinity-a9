@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <footer className="footer p-10 bg-base-200 text-base-content">
-        <aside>
+        <aside className="mx-auto">
           <svg
             width="50"
             height="50"
