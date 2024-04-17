@@ -15,6 +15,9 @@ const Navbar = () => {
       <li className="font-bold">
         <NavLink to="/userProfile">User Profile</NavLink>
       </li>
+      <li className="font-bold">
+        <NavLink to="/coupon">Coupon</NavLink>
+      </li>
     </>
   );
   return (
@@ -50,8 +53,8 @@ const Navbar = () => {
             Innfinity
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <div className="navbar-center hidden lg:flex ">
+          <ul className="menu menu-horizontal space-x-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           {user ? (

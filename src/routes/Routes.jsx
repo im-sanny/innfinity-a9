@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         path: "/upDateProfile",
         element: (
           <PrivateRoute>
-            <UpDateProfile></UpDateProfile>,
+            <UpDateProfile></UpDateProfile>
           </PrivateRoute>
         ),
       },
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         path: "/userProfile",
         element: (
           <PrivateRoute>
-            <UserProfile></UserProfile>,
+            <UserProfile></UserProfile>
           </PrivateRoute>
         ),
       },
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         path: "/coupon",
         element:(
           <PrivateRoute>
-            <Coupon></Coupon>,
+            <Coupon></Coupon>
           </PrivateRoute>
         )
       }

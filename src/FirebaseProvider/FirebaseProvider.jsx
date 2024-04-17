@@ -31,7 +31,7 @@ const FirebaseProvider = ({ children }) => {
 
   //update user profile
   const updateUserProfile = (name, image) => {
-    return updateProfile(auth.currentUser, {
+    return updateProfile(auth.currentUser, { 
       displayName: name,
       photoURL: image,
     });

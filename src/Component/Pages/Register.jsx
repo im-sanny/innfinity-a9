@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, updateUserProfile } = UseAuth();
+  const { createUser } = UseAuth();
   const {
     register,
     handleSubmit,
@@ -22,7 +22,7 @@ const Register = () => {
   const form = "/";
 
   const onSubmit = async (data) => {
-    const { email, password, photoURL, username } = data;
+    const { email, password } = data;
 
     if (password.length < 6) {
       setError("password", {
@@ -48,7 +48,7 @@ const Register = () => {
 
     try {
       await createUser(email, password);
-      await updateUserProfile(username, photoURL);
+      // await updateUserProfile(username, photoURL);
 
       toast.success("Registration successful!");
       navigate(form);

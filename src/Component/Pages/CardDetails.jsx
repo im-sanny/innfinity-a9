@@ -8,7 +8,6 @@ const CardDetails = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
   const service = details.find((detail) => detail.id == idInt);
-  // console.log(service);
   return (
     <>
       <Helmet>
