@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -21,9 +21,8 @@ const Register = () => {
   const navigate = useNavigate();
   const form = "/";
 
-  const onSubmit = (data) => {
-    const { email, password, image, fullName } = data;
-    console.log(image, fullName);
+  const onSubmit = async (data) => {
+    const { email, password, photoURL, username } = data;
 
     if (password.length < 6) {
       setError("password", {
@@ -47,23 +46,19 @@ const Register = () => {
 
     setLoading(true);
 
-    createUser(email, password).then(() => {
+    try {
+      await createUser(email, password);
+      await updateUserProfile(username, photoURL);
+
       toast.success("Registration successful!");
       navigate(form);
-    })
-    .error(() => {
-      toast.error('Registration failed')
-    })
-
-    updateUserProfile(image, fullName).then(() => {
-      navigate(form);
-    });
-    setLoading(false)
-    reset(); 
+      reset(); 
+    } catch (error) {
+      toast.error("Registration failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
-  
-
-
   return (
     <div>
       <ToastContainer />
