@@ -5,9 +5,9 @@ const UserProfile = () => {
   const { user } = UseAuth();
   return (
     <>
-    <Helmet>
-      <title>Innfinity | UserProfile</title>
-    </Helmet>
+      <Helmet>
+        <title>Innfinity | UserProfile</title>
+      </Helmet>
       <div className="flex justify-center max-w-6xl my-5">
         <div className="flex flex-col justify-center w-full max-w-xl p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
@@ -23,6 +23,11 @@ const UserProfile = () => {
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 {user?.email || "email not found"}
               </p>
+              {user && (
+                <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                  {user.role || "Junior frontend developer"}
+                </p>
+              )}
             </div>
             <div className="flex justify-center pt-2 space-x-4 align-center">
               <div
