@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
+import DetailsBanner from "./DetailsBanner";
 
 const CardDetails = () => {
   const details = useLoaderData();
@@ -18,6 +19,7 @@ const CardDetails = () => {
           Show Details
         </button>
       </div>
+      <DetailsBanner></DetailsBanner>
       <div className="p-5 mx-auto sm:p-10 md:p-16 bg-blue-50 rounded-lg my-5">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded-lg">
           <img
