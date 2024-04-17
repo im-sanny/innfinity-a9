@@ -4,28 +4,23 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-
 const DetailsBanner = () => {
-    const welcomeMessages = [
-      "Welcome to our website!",
-      "Hello and welcome!",
-      "We're glad to have you here!",
-      "Welcome aboard!",
-      "Thanks for visiting us!",
-      "Welcome to the family!",
-    ];
-    
-    const generateWelcomeText = () => {
-      const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
-      return welcomeMessages[randomIndex];
-    };
-  // Generate a random welcome message
-  const welcomeText = generateWelcomeText();
+  const welcomeMessages = [
+    "Welcome to our website!",
+    "Hello and welcome!",
+    "We're glad to have you here!",
+    "Welcome aboard!",
+    "Thanks for visiting us!",
+    "Welcome to the family!",
+  ];
+
+  const generateWelcomeText = () => {
+    const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
+    return welcomeMessages[randomIndex];
+  };
   return (
     <>
-    <div className="p-5 bg-green-50 my-5 md:my-10 rounded-md max-w-6xl flex justify-center">
-
-      <div className="my-5 rounded-lg max-w-5xl">
+      <div className="my-5 rounded-lg max-w-6xl p-10 bg-green-50">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -37,7 +32,7 @@ const DetailsBanner = () => {
             clickable: true,
           }}
           navigation={true}
-          loop={true}
+          //   loop={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
@@ -53,9 +48,10 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                 <div className="absolute inset-0 flex flex-col justify-center items-center">
-                  <h2 className="text-2xl md:text-5xl font-bold text-white">{welcomeText}</h2>
-                  <p className="text-lg text-white">Your text here</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                  <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
+                    {generateWelcomeText()}
+                  </h2>
                 </div>
               </div>
             </SwiperSlide>
@@ -70,9 +66,10 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                 <div className="absolute inset-0 flex flex-col justify-center items-center">
-                  <h2 className="text-2xl md:text-5xl font-bold text-white">{welcomeText}</h2>
-                  <p className="text-lg text-white">Your text here</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                  <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
+                    {generateWelcomeText()}
+                  </h2>
                 </div>
               </div>
             </SwiperSlide>
@@ -87,9 +84,10 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                  <div className="absolute inset-0 flex flex-col justify-center items-center">
-                  <h2 className="text-2xl md:text-5xl font-bold text-white">{welcomeText}</h2>
-                  <p className="text-lg text-white">Your text here</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                  <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
+                    {generateWelcomeText()}
+                  </h2>
                 </div>
               </div>
             </SwiperSlide>
@@ -104,16 +102,16 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                 <div className="absolute inset-0 flex flex-col justify-center items-center">
-                  <h2 className="text-2xl md:text-5xl font-bold text-white">{welcomeText}</h2>
-                  <p className="text-lg text-white">Your text here</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                  <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
+                    {generateWelcomeText()}
+                  </h2>
                 </div>
               </div>
             </SwiperSlide>
           </div>
         </Swiper>
       </div>
-    </div>
     </>
   );
 };

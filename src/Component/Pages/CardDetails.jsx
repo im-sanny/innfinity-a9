@@ -13,12 +13,12 @@ const CardDetails = () => {
       <Helmet>
         <title>Innfinity | ShowDetails</title>
       </Helmet>
+      <DetailsBanner></DetailsBanner>
       <div className="navbar flex justify-center bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg">
         <button className="flex justify-center font-bold text-xl">
           Show Details
         </button>
       </div>
-      <DetailsBanner></DetailsBanner>
       <div className="p-5 mx-auto sm:p-10 md:p-16 bg-blue-50 rounded-lg my-5">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded-lg">
           <img
