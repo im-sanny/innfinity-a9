@@ -25,9 +25,9 @@ const UpDateProfile = () => {
     } catch (error) {
       toast.error("Failed to update profile. Please try again.");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
-    reset()
+    reset();
   };
 
   return (
