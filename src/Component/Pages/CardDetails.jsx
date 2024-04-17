@@ -15,18 +15,18 @@ const CardDetails = () => {
       </Helmet>
       <DetailsBanner></DetailsBanner>
       <div className="navbar flex justify-center bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg">
-        <button className="flex justify-center font-bold text-xl">
+        <button className="flex justify-center font-normal text-2xl">
           Show Details
         </button>
       </div>
-      <div className="p-5 mx-auto sm:p-10 md:p-16 bg-blue-50 rounded-lg my-5">
+      <div className="mx-auto p-10 lg:p-16 md:p-16 bg-blue-50 rounded-lg my-5">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded-lg">
           <img
             src={service.image}
             alt=""
             className="w-full h-60 sm:h-96 dark:bg-gray-500 rounded-lg"
           />
-          <div className="p-6 pb-6 m-4 mx-auto -mt-16 space-y-2 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
+          <div className="p-6 pb-6 m-4 mx-auto glass -mt-16 space-y-2 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
             <div className="space-y-2">
               <a
                 rel="noopener noreferrer"
@@ -39,7 +39,7 @@ const CardDetails = () => {
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  className="text-xs hover:underline flex items-center gap-1"
+                  className="text-sm font-normal hover:underline flex items-center gap-1 text-green-600"
                 >
                   <FaLocationDot></FaLocationDot> {service.location}
                 </a>
@@ -47,13 +47,15 @@ const CardDetails = () => {
             </div>
             <div className="dark:text-gray-800">
               {service.description}
-              <div className="flex gap-5 mt-2">
+              <div className="flex font-normal text-blue-500 gap-5 mt-2">
+                <span className="font-bold text-black">Facilities :</span>{" "}
                 <p>{service.facilities[0]}</p>
                 <p>{service.facilities[1]}</p>
                 <p>{service.facilities[2]}</p>
               </div>
-              <p className="flex items-center gap-1">
-                Segment: {service.segment_name}
+              <p className="flex items-center gap-5">
+                <span className="font-bold">Segment :</span>
+                <span className="text-blue-500">{service.segment_name} </span>
               </p>
             </div>
           </div>

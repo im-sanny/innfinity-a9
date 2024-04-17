@@ -39,7 +39,7 @@ const UpDateProfile = () => {
 
       <section className="p-6">
         <div className="flex justify-center my-5">
-          <div className="flex flex-col justify-center items-center max-w-md p-6 shadow-md rounded-xl sm:px-12 ">
+          <div className="flex flex-col justify-center items-center max-w-md p-6 shadow-md rounded-xl sm:px-12 glass">
             <img
               src={localUser?.photoURL || ""}
               alt=""

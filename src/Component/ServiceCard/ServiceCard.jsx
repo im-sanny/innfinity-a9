@@ -35,7 +35,7 @@ const ServiceCard = ({ service }) => {
         </div>
         <div>
           <div className="mb-2 flex items-center justify-between">
-            <Typography color="blue-gray" className="font-medium">
+            <Typography  color="text-green-600" className="font-medium text-green-500">
               {estate_title}
             </Typography>
             <Typography color="blue-gray" className="font-medium">

@@ -132,6 +132,7 @@ const Home = () => {
           <ServiceCard key={service.id} service={service}></ServiceCard>
         ))}
       </div>
+      
       {/* more properties */}
       <div className="text-center max-w-6xl mx-5">
         <h2 className="text-5xl font-normal mb-5">

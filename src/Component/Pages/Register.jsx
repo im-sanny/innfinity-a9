@@ -22,7 +22,7 @@ const Register = () => {
   const form = "/";
 
   const onSubmit = async (data) => {
-    const { email, password } = data;
+    const { email, password, username } = data;
 
     if (password.length < 6) {
       setError("password", {
@@ -47,12 +47,10 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await createUser(email, password);
-      // await updateUserProfile(username, photoURL);
-
+      await createUser(email, password, username);
       toast.success("Registration successful!");
       navigate(form);
-      reset(); 
+      reset();
     } catch (error) {
       toast.error("Registration failed. Please try again.");
     } finally {
@@ -75,7 +73,11 @@ const Register = () => {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              onClick={toast}
+              className="card-body"
+            >
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Username</span>
@@ -88,6 +90,11 @@ const Register = () => {
                   required
                   {...register("username", { required: true })}
                 />
+                {errors.username && (
+                  <span className="text-red-600 mt-1 ml-2">
+                    Username is required
+                  </span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -142,7 +149,6 @@ const Register = () => {
               </div>
               <div className="form-control mt-2">
                 <button
-                  onClick={toast}
                   type="submit"
                   className="btn btn-primary"
                   disabled={loading}

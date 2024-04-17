@@ -134,7 +134,7 @@
         "status": "rent",
         "area": "2500 sq ft",
         "location": "Historic Village, England",
-        "facilities": [
+        "facilities":[
             "Antique Furnishings",
             "Homemade Breakfast",
             "Garden Courtyard",
