@@ -12,19 +12,7 @@ import {
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const {
-    estate_title,
-    image,
-    id,
-    segment_name,
-    description,
-    price,
-    status,
-    area,
-    location,
-    facilities,
-    view_property_button,
-  } = service;
+  const { estate_title, image, id, description, price, status, area } = service;
   return (
     <div>
       <Card className="px-4 pb-4 bg-base-300 rounded-lg h-full">
@@ -45,7 +33,7 @@ const ServiceCard = ({ service }) => {
             {area}
           </div>
         </div>
-        <CardBody>
+        <div>
           <div className="mb-2 flex items-center justify-between">
             <Typography color="blue-gray" className="font-medium">
               {estate_title}
@@ -61,8 +49,8 @@ const ServiceCard = ({ service }) => {
           >
             {description}
           </Typography>
-        </CardBody>
-        <CardFooter className="pt-0 flex justify-around ">
+        </div>
+        <div className="lg:pt-0 pt-5y flex justify-around ">
           <Link to={`/cardDetails/${id}`}>
             <a
               href="#_"
@@ -94,7 +82,7 @@ const ServiceCard = ({ service }) => {
               </span>
             </a>
           </Link>
-        </CardFooter>
+        </div>
       </Card>
     </div>
   );
