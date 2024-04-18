@@ -15,7 +15,7 @@ const Home = () => {
     </Helmet>
       {/* banner section */}
       <div className="mx-5 lg:max-w-6xl lg:h-full lg:mx-auto">
-        <div className="carousel w-full rounded-md my-5">
+        <div data-aos="fade-down" data-aos-duration="1000" className="carousel w-full rounded-md my-5">
           <div id="slide1" className="carousel-item relative w-full">
             <img
               src="https://i.ibb.co/m9MWpdm/hotel-7885138-1920.jpg"
@@ -24,7 +24,7 @@ const Home = () => {
               alt="Hotel Image"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <div className="glass p-2 text-center lg:max-w-96 mx-auto rounded-lg overflow-hidden">
+              <div  data-aos="zoom-in" data-aos-delay="1000"  className="glass p-2 text-center lg:max-w-96 mx-auto rounded-lg overflow-hidden">
                 <h1 className="lg:text-4xl text-2xl text-black font-bold">
                   Welcome to Innfinity
                 </h1>
@@ -119,8 +119,8 @@ const Home = () => {
       {/* estate section */}
       <div className="text-center flex justify-center">
         <div className="max-w-4xl">
-          <h1 className="text-5xl  lg:mx-0 mx-5 mb-5"> Discover Our Best Deals</h1>
-          <p className="mt-2 lg:mx-0 mx-10 lg:mb-0 mb-5">
+          <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"  className="text-5xl lg:mx-0 mx-5 mb-5"> Discover Our Best Deals</h1>
+          <p data-aos="fade-right" data-aos-delay="1200"  className="mt-2 lg:mx-0 mx-10 lg:mb-0 mb-5">
             Discover unbeatable deals across our array of accommodations:
             hotels, motels, resorts, vacation rentals, lodges, and guesthouses.
             Experience luxury and savings with Innfinity.
@@ -135,12 +135,12 @@ const Home = () => {
       
       {/* more properties */}
       <div className="text-center max-w-6xl mx-5">
-        <h2 className="text-5xl font-normal mt-5 lg:mt-0 mb-5">
+        <h2 data-aos="fade-left" data-aos-duration="1000" className="text-5xl font-normal mt-5 lg:mt-0 mb-5">
           Discover more services we provide
         </h2>
         <div className="flex justify-center">
 
-        <p className="max-w-3xl flex justify-center mb-5">
+        <p data-aos="fade-left" data-aos-duration="1100" className="max-w-3xl flex justify-center mb-5">
           Innfinity offers unmatched luxury. Impeccable service, elegant
           accommodations, and breathtaking ambiance. A haven for unforgettable
           experiences awaits. Book now!

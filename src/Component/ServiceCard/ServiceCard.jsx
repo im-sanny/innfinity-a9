@@ -15,7 +15,13 @@ const ServiceCard = ({ service }) => {
   const { estate_title, image, id, description, price, status, area } = service;
   return (
     <div>
-      <Card className="px-4 pb-4 bg-base-300 rounded-lg h-full">
+      <Card
+        data-aos="fade-up"
+        data-aos-delay="1400"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-center"
+        className="px-4 pb-4 bg-base-300 rounded-lg h-full"
+      >
         <CardHeader shadow={false} floated={false} className="h-56 rounded-lg">
           <img
             src={image}
@@ -35,7 +41,10 @@ const ServiceCard = ({ service }) => {
         </div>
         <div>
           <div className="mb-2 flex items-center justify-between">
-            <Typography  color="text-green-600" className="font-medium text-green-500">
+            <Typography
+              color="text-green-600"
+              className="font-medium text-green-500"
+            >
               {estate_title}
             </Typography>
             <Typography color="blue-gray" className="font-medium">

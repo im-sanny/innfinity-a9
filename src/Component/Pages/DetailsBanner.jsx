@@ -20,7 +20,7 @@ const DetailsBanner = () => {
   };
   return (
     <>
-      <div className="my-5 rounded-lg max-w-6xl p-10 bg-green-50">
+      <div className="my-5 rounded-lg max-w-6xl md:p-8 p-5 lg:p-10 bg-green-50">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -32,7 +32,7 @@ const DetailsBanner = () => {
             clickable: true,
           }}
           navigation={true}
-          //   loop={true}
+          // loop={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
@@ -48,7 +48,11 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  className="absolute inset-0 flex flex-col justify-center items-center"
+                >
                   <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
                     {generateWelcomeText()}
                   </h2>
@@ -66,7 +70,11 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  className="absolute inset-0 flex flex-col justify-center items-center"
+                >
                   <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
                     {generateWelcomeText()}
                   </h2>
@@ -84,7 +92,11 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  className="absolute inset-0 flex flex-col justify-center items-center"
+                >
                   <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
                     {generateWelcomeText()}
                   </h2>
@@ -102,7 +114,11 @@ const DetailsBanner = () => {
                   height: "400px",
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  className="absolute inset-0 flex flex-col justify-center items-center"
+                >
                   <h2 className="text-2xl md:text-5xl font-bold glass p-10 rounded-lg text-white">
                     {generateWelcomeText()}
                   </h2>

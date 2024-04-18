@@ -33,11 +33,14 @@ const Login = () => {
 
   return (
     <>
-    <Helmet>
-      <title>Innfinity | Login</title>
-    </Helmet>
+      <Helmet>
+        <title>Innfinity | Login</title>
+      </Helmet>
       <div className="hero min-h-screen bg-green-50 rounded-lg mb-5 lg:my-5 py-5">
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div
+          data-aos="zoom-in"
+          className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+        >
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-center text-2xl font-bold">Please Login</h2>
             <div className="form-control">

@@ -14,19 +14,33 @@ const CardDetails = () => {
         <title>Innfinity | ShowDetails</title>
       </Helmet>
       <DetailsBanner></DetailsBanner>
-      <div className="navbar flex justify-center bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="navbar flex justify-center bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg"
+      >
         <button className="flex justify-center font-normal text-2xl">
           Show Details
         </button>
       </div>
-      <div className="mx-auto p-10 lg:p-16 md:p-16 bg-blue-50 rounded-lg my-5">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        className="mx-auto p-5 lg:p-16 md:p-16 bg-blue-50 rounded-lg my-5"
+      >
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded-lg">
           <img
+            data-aos="zoom-in"
+            data-aos-delay="1000"
             src={service.image}
             alt=""
             className="w-full h-60 sm:h-96 dark:bg-gray-500 rounded-lg"
           />
-          <div className="p-6 pb-6 m-4 mx-auto glass -mt-16 space-y-2 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="1200"
+            className="p-6 pb-6 m-4 mx-auto glass -mt-16 space-y-2 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md"
+          >
             <div className="space-y-2">
               <a
                 rel="noopener noreferrer"
@@ -47,14 +61,14 @@ const CardDetails = () => {
             </div>
             <div className="dark:text-gray-800">
               {service.description}
-              <div className="flex font-normal text-blue-500 gap-5 mt-2">
-                <span className="font-bold text-black">Facilities :</span>{" "}
+              <div className="flex font-normal text-blue-500 gap-2 lg:gap-5 mt-2">
+                <span className="font-bold text-black">Facilities:</span>{" "}
                 <p>{service.facilities[0]}</p>
                 <p>{service.facilities[1]}</p>
                 <p>{service.facilities[2]}</p>
               </div>
-              <p className="flex items-center gap-5">
-                <span className="font-bold">Segment :</span>
+              <p className="flex items-center gap-2 lg:gap-5">
+                <span className="font-bold">Segment:</span>
                 <span className="text-blue-500">{service.segment_name} </span>
               </p>
             </div>

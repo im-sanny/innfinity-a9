@@ -65,20 +65,27 @@ const Register = () => {
       </Helmet>
       <div className="hero min-h-screen bg-blue-100 rounded-lg my-5">
         <div className="lg:hero-content">
-          <div className="lg:text-left text-center">
+          <div data-aos="fade-right" className="lg:text-left text-center">
             <h1 className="text-5xl font-bold">Register Now!</h1>
             <p className="py-6">
               Register now to create your account and start exploring our
               platform!
             </p>
           </div>
-          <div className="card mx-auto text-center shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div
+            data-aos="fade-left"
+            className="card mx-auto text-center shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+          >
             <form
               onSubmit={handleSubmit(onSubmit)}
               onClick={toast}
               className="card-body"
             >
-              <div className="form-control">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="900"
+                className="form-control"
+              >
                 <label className="label">
                   <span className="label-text">Username</span>
                 </label>
@@ -96,7 +103,11 @@ const Register = () => {
                   </span>
                 )}
               </div>
-              <div className="form-control">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                className="form-control"
+              >
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
@@ -109,7 +120,11 @@ const Register = () => {
                   {...register("email", { required: true })}
                 />
               </div>
-              <div className="form-control">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1100"
+                className="form-control"
+              >
                 <label className="label">
                   <span className="label-text">Photo</span>
                 </label>
@@ -121,7 +136,11 @@ const Register = () => {
                   {...register("photoURL")}
                 />
               </div>
-              <div className="form-control relative">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1200"
+                className="form-control relative"
+              >
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
@@ -147,7 +166,11 @@ const Register = () => {
                   </span>
                 )}
               </div>
-              <div className="form-control mt-2">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1300"
+                className="form-control mt-2"
+              >
                 <button
                   type="submit"
                   className="btn btn-primary"
@@ -157,7 +180,11 @@ const Register = () => {
                 </button>
               </div>
             </form>
-            <div className="text-center -mt-5 mb-3">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="1400"
+              className="text-center -mt-5 mb-3"
+            >
               Already have an account?
               <Link to="/login" className="text-blue-500 ml-2 hover:underline">
                 Login here.
