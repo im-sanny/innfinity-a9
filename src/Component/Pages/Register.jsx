@@ -63,16 +63,16 @@ const Register = () => {
       <Helmet>
         <title>Innfinity | Register</title>
       </Helmet>
-      <div className="hero min-h-screen bg-base-300 rounded-lg my-5">
-        <div className="hero-content">
-          <div className="text-center lg:text-left">
+      <div className="hero min-h-screen bg-blue-100 rounded-lg my-5">
+        <div className="lg:hero-content">
+          <div className="lg:text-left text-center">
             <h1 className="text-5xl font-bold">Register Now!</h1>
             <p className="py-6">
               Register now to create your account and start exploring our
               platform!
             </p>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card mx-auto text-center shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form
               onSubmit={handleSubmit(onSubmit)}
               onClick={toast}
