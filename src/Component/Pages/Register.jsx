@@ -63,7 +63,7 @@ const Register = () => {
       <Helmet>
         <title>Innfinity | Register</title>
       </Helmet>
-      <div className="hero min-h-screen bg-blue-100 rounded-lg my-5">
+      <div className="hero min-h-screen bg-green-100 rounded-lg my-5">
         <div className="lg:hero-content">
           <div data-aos="fade-right" className="lg:text-left text-center">
             <h1 className="text-5xl font-bold">Register Now!</h1>

@@ -10,13 +10,13 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="font-bold">
+        <NavLink to="/coupon">Coupon</NavLink>
+      </li>
+      <li className="font-bold">
         <NavLink to="/upDateProfile">Update Profile</NavLink>
       </li>
       <li className="font-bold">
         <NavLink to="/userProfile">User Profile</NavLink>
-      </li>
-      <li className="font-bold">
-        <NavLink to="/coupon">Coupon</NavLink>
       </li>
     </>
   );

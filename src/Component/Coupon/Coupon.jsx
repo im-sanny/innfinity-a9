@@ -1,12 +1,20 @@
 const Coupon = () => {
   return (
     <>
-    <div className="text-center font-bold text-3xl fo p-4 bg-green-300 ">
-  <aside>
-    <p>Special offer only for our User</p>
-  </aside>
-</div>
-      <div className="px-8 py-2 dark:bg-blue-100 dark:text-gray-800">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="800"
+        className="text-center font-bold text-3xl p-4 bg-green-300 "
+      >
+        <aside>
+          <p>Special offer only for our User</p>
+        </aside>
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="900"
+        className="px-8 py-2 dark:bg-blue-100 dark:text-gray-800"
+      >
         <div className="flex items-center mx-auto container justify-center md:justify-between py-2">
           <div>
             <span>
@@ -14,7 +22,8 @@ const Coupon = () => {
             </span>
             <a href="#" rel="noopener noreferrer" className="underline">
               sign up
-            </a> {''}
+            </a>{" "}
+            {""}
             today!
           </div>
           <a
@@ -39,7 +48,11 @@ const Coupon = () => {
           </a>
         </div>
       </div>
-      <div className="p-6 py-12 dark:bg-blue-50 mt-2 md:mt-5">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="1000"
+        className="p-6 py-12 mb-5 dark:bg-blue-50 mt-2 md:mt-5"
+      >
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <h2 className="text-center text-6xl tracking-tighter font-bold">

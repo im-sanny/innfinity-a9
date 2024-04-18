@@ -37,15 +37,18 @@ const UpDateProfile = () => {
         <title>Innfinity | UpdateProfile</title>
       </Helmet>
 
-      <section className="p-6">
-        <div className="flex justify-center my-5">
-          <div className="flex flex-col justify-center items-center max-w-md p-6 shadow-md rounded-xl sm:px-12 glass">
+      <section className="pb-">
+        <div className="flex justify-center my-5 bg-blue-200 rounded-lg py-5">
+          <div
+            data-aos="zoom-in"
+            className="flex flex-col justify-center items-center max-w-md p-6 shadow-md rounded-xl sm:px-12 glass"
+          >
             <img
               src={localUser?.photoURL || ""}
               alt=""
               className="w-40 h-40 mx-auto rounded-full dark:bg-gray-500 aspect-square"
             />
-            <p className="text-2xl text-blue-300 font-bold">
+            <p className="text-2xl mt-2 font-bold">
               {localUser?.displayName || ""}
             </p>
             <h1 className="text-3xl lg:text-3xl font-extrabold my-4">
@@ -69,6 +72,7 @@ const UpDateProfile = () => {
                   name="fullName"
                   placeholder="Name"
                   className="input input-bordered w-full"
+                  required
                   {...register("fullName")}
                 />
               </div>
@@ -84,13 +88,14 @@ const UpDateProfile = () => {
                   id="image"
                   name="image"
                   placeholder="Photo URL"
+                  required
                   className="input input-bordered w-full"
                   {...register("image")}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full btn bg-blue-200 py-2 mt-3 font-semibold rounded"
+                className="w-full btn  text-lg py-2 mt-3 font-semibold rounded-lg"
               >
                 {loading ? "Updating..." : "Submit"}
               </button>

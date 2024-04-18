@@ -8,8 +8,11 @@ const UserProfile = () => {
       <Helmet>
         <title>Innfinity | UserProfile</title>
       </Helmet>
-      <div className="flex justify-center max-w-6xl my-5">
-        <div className="flex flex-col justify-center w-full max-w-xl p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+      <div className="flex justify-center max-w-6xl bg-blue-200 py-5 rounded-lg my-5">
+        <div
+          data-aos="zoom-in"
+          className="flex glass flex-col justify-center w-full max-w-xl p-6 shadow-md rounded-xl sm:px-12"
+        >
           <img
             src={user?.photoURL || ""}
             alt=""
