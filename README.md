@@ -1,8 +1,7 @@
 # Awesome Website
 
 [Live Site firebase](https://b9-a9-fe222.web.app) 
-[Live Site surge](innfinity.surge.sh) 
-[Live Site netlify]() 
+[Live Site netlify](https://innfinity.netlify.app/) 
 
 ## Description
 

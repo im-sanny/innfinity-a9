@@ -9,6 +9,9 @@ import UpDateProfile from "../Component/Pages/UpDateProfile";
 import UserProfile from "../Component/Pages/UserProfile";
 import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 import Coupon from "../Component/Coupon/Coupon";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const router = createBrowserRouter([
   {
