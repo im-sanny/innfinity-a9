@@ -17,9 +17,7 @@ const ServiceCard = ({ service }) => {
     <div>
       <Card
         data-aos="fade-up"
-        data-aos-delay="1400"
         data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
         className="px-4 pb-4 bg-base-300 rounded-lg h-full"
       >
         <CardHeader shadow={false} floated={false} className="h-56 rounded-lg">
