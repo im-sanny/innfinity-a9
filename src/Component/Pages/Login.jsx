@@ -5,6 +5,8 @@ import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin";
 import { Helmet } from "react-helmet";
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);

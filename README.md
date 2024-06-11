@@ -1,4 +1,4 @@
-# Awesome Website
+# Innfinity
 
 [Live Site firebase](https://b9-a9-fe222.web.app) 
 [Live Site netlify](https://innfinity.netlify.app/) 

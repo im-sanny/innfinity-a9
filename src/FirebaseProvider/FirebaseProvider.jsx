@@ -48,7 +48,7 @@ const FirebaseProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-  //google login
+  //github login
   const githubLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider);
